@@ -1,5 +1,0 @@
-function Chart {
-    [CmdletBinding()]
-    param()
-    
-}
