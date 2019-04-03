@@ -1,16 +1,16 @@
 
-Import-Module .\Dashimo.psd1 -Force
+Import-Module Dashimo -Force
 Import-Module PSWinDocumentation.AD -Force
-Import-Module PSWriteHTML -Force
+Import-Module PSWinReporting
 
 if ($null -eq $DataSetForest) {
     $DataSetForest = Get-WinADForestInformation -Verbose
 }
 if ($null -eq $DataSetEvents) {
-   $DataSetEvents = Find-Events -Report UserChangesDetailed, UserChanges, UserLockouts, UserStatus, GroupChanges -Servers 'AD1', 'AD2' -DatesRange Last7days -Quiet
+    $DataSetEvents = Find-Events -Report UserChangesDetailed, UserChanges, UserLockouts, UserStatus, GroupChanges -Servers 'AD1', 'AD2' -DatesRange Last7days -Quiet
 }
 
-Dashboard -Name 'Dashimo Test' -FilePath $PSScriptRoot\Dashboard.html {
+Dashboard -Name 'Dashimo Test' -FilePath $PSScriptRoot\DashboardActiveDirectory.html {
     Tab -Name 'Forest' {
         Section -Name 'Forest Information' -Invisible {
             Section -Name 'Forest Information' {
@@ -50,6 +50,7 @@ Dashboard -Name 'Dashimo Test' -FilePath $PSScriptRoot\Dashboard.html {
             }
         }
     }
+
     foreach ($Domain in $DataSetForest.Domains) {
         Tab -Name $Domain {
             Section -Name 'Domain Controllers / FSMO Roles' {
