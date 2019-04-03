@@ -2,6 +2,7 @@
 $Process = Get-Process | Select-Object -First 30
 $Process1 = Get-Process | Select-Object -First 5
 $Process2 = Get-Process | Select-Object -First 10
+$Process3 = Get-Process | Select-Object -First 10
 
 Dashboard -Name 'Dashimo Test' -FilePath $PSScriptRoot\DashboardEasy.html {
     Tab -Name 'First tab' {
@@ -17,7 +18,7 @@ Dashboard -Name 'Dashimo Test' -FilePath $PSScriptRoot\DashboardEasy.html {
             }
         }
         Section -Name 'Test3' {
-            Table -DataTable $Process
+            Table -DataTable $Process -DefaultSortColumn 'Id'
         }
     }
     Tab -Name 'second tab' {
@@ -28,7 +29,7 @@ Dashboard -Name 'Dashimo Test' -FilePath $PSScriptRoot\DashboardEasy.html {
             Table -DataTable $Process2
         }
         Panel {
-            Table -DataTable $Process2
+            Table -DataTable $Process3 -DefaultSortIndex 4
         }
     }
 }

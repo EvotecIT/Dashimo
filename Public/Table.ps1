@@ -19,12 +19,17 @@ function Table {
         [bool] $ScrollCollapse,
         [string[]][ValidateSet('display', 'cell-border', 'compact', 'hover', 'nowrap', 'order-column', 'row-border', 'stripe')] $Style = @('display', 'compact'),
         [string]$TextWhenNoData = 'No data available.',
-        [int] $ScreenSizePercent = 0
+        [int] $ScreenSizePercent = 0,
+        [string] $DefaultSortColumn,
+        [int] $DefaultSortIndex = -1,
+        [ValidateSet('Ascending', 'Descending')][string] $DefaultSortOrder = 'Ascending'
     )
     New-HTMLTable -DataTable $DataTable `
         -HideFooter:$HideFooter `
         -Buttons $Buttons -PagingStyle $PagingStyle -PagingOptions $PagingOptions `
         -DisablePaging:$DisablePaging -DisableOrdering:$DisableOrdering -DisableInfo:$DisableInfo -DisableColumnReorder:$DisableColumnReorder -DisableProcessing:$DisableProcessing `
         -DisableResponsiveTable:$DisableResponsiveTable -DisableSelect:$DisableSelect -DisableStateSave:$DisableStateSave -DisableSearch:$DisableSearch -ScrollCollapse $ScrollCollapse `
-        -Style $Style -TextWhenNoData:$TextWhenNoData -ScreenSizePercent $ScreenSizePercent -ConditionalFormatting $ConditionalFormatting
+        -Style $Style -TextWhenNoData:$TextWhenNoData -ScreenSizePercent $ScreenSizePercent `
+        -ConditionalFormatting $ConditionalFormatting `
+        -DefaultSortColumn $DefaultSortColumn -DefaultSortIndex $DefaultSortIndex -DefaultSortOrder $DefaultSortOrder
 }
