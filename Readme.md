@@ -1,9 +1,6 @@
 # Dashimo - PowerShell Module
 
-Dashimo is very simple, intuitive PowerShell generated HTML file. That's right. A single, static HTML file that you can send to email or host on a website.
-
-
-
+Dashimo is very simple, intuitive PowerShell generated HTML file. That's right. A single, static HTML file that you can send to email or host on a website. Dashimo is based on [PSWriteHTML](https://github.com/EvotecIT/PSWriteHTML) which I've written and is under development. What you can do in **Dashimo** you can do there and more. If you would like to help with development all code related to HTML/JS/CSS is on PSWriteHTML repo.
 
 ### Changelog
 
