@@ -29,7 +29,7 @@ Dashboard -Name 'Dashimo Test' -FilePath $PSScriptRoot\DashboardEasy.html -Show 
             Table -DataTable $Process2
         }
         Panel {
-            Table -DataTable $Process3 -DefaultSortIndex 4
+            Table -DataTable $Process3 -DefaultSortIndex 4 -ScrollCollapse
         }
     }
 }

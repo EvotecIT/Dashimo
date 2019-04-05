@@ -13,6 +13,9 @@ Dashimo is very simple, intuitive PowerShell generated HTML file. That's right. 
 - 0.0.1 - 01.04.2019 - https://evotec.xyz/meet-dashimo-powershell-generated-dashboard/ is an overview of what Dashimo is.
 
 
+### Credits
+
+[Matthew Quickenden](https://www.linkedin.com/in/matthewquickenden/) ([@lucidqdreams](https://github.com/lucidqdreams)) - author of  ReportHTML - without him this wouldn't be possible.
 
 ### Examples
 
@@ -29,7 +32,6 @@ Dashboard -Name 'Dashimo Test' -FilePath $PSScriptRoot\DashboardSimplestTableCon
     }
 }
 ```
-
 
 ![Example 1](https://evotec.xyz/wp-content/uploads/2019/04/img_5ca65ee575364.png)
 
