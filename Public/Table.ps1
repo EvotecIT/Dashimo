@@ -18,6 +18,8 @@ function Table {
         [switch]$DisableSearch,
         [switch]$ScrollCollapse,
         [switch]$OrderMulti,
+        [switch]$Filtering,
+        [ValidateSet('Top', 'Bottom', 'Both')][string]$FilteringLocation = 'Bottom',
         [string[]][ValidateSet('display', 'cell-border', 'compact', 'hover', 'nowrap', 'order-column', 'row-border', 'stripe')] $Style = @('display', 'compact'),
         [string]$TextWhenNoData = 'No data available.',
         [int] $ScreenSizePercent = 0,
@@ -34,5 +36,6 @@ function Table {
         -Style $Style -TextWhenNoData:$TextWhenNoData -ScreenSizePercent $ScreenSizePercent `
         -ConditionalFormatting $ConditionalFormatting `
         -DefaultSortColumn $DefaultSortColumn -DefaultSortIndex $DefaultSortIndex -DefaultSortOrder $DefaultSortOrder `
-        -Find $Find -OrderMulti:$OrderMulti
+        -Find $Find -OrderMulti:$OrderMulti `
+        -Filtering:$Filtering -FilteringLocation $FilteringLocation
 }

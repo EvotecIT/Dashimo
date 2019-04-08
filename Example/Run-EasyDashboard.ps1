@@ -7,9 +7,9 @@ $Process3 = Get-Process | Select-Object -First 10
 Dashboard -Name 'Dashimo Test' -FilePath $PSScriptRoot\DashboardEasy.html -Show {
     Tab -Name 'First tab' {
         Section -Name 'Test' {
-            Table -DataTable $Process
+            Table -DataTable $Process -Filtering
         }
-        Section -Name 'Test2' {
+        Section -Name 'Test2' -Collapsable -Collapsed {
             Panel {
                 Table -DataTable $Process1
             }
