@@ -23,8 +23,8 @@ function Table {
         [string[]][ValidateSet('display', 'cell-border', 'compact', 'hover', 'nowrap', 'order-column', 'row-border', 'stripe')] $Style = @('display', 'compact'),
         [string]$TextWhenNoData = 'No data available.',
         [int] $ScreenSizePercent = 0,
-        [string] $DefaultSortColumn,
-        [int] $DefaultSortIndex = -1,
+        [string[]] $DefaultSortColumn,
+        [int[]] $DefaultSortIndex,
         [ValidateSet('Ascending', 'Descending')][string] $DefaultSortOrder = 'Ascending',
         [alias('Search')][string]$Find
     )
