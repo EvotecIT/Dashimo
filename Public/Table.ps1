@@ -27,7 +27,8 @@ function Table {
         [int[]] $DefaultSortIndex,
         [ValidateSet('Ascending', 'Descending')][string] $DefaultSortOrder = 'Ascending',
         [alias('Search')][string]$Find,
-        [switch] $InvokeHTMLTags
+        [switch] $InvokeHTMLTags,
+        [switch] $DisableNewLine
     )
     New-HTMLTable -DataTable $DataTable `
         -HideFooter:$HideFooter `
@@ -39,5 +40,5 @@ function Table {
         -DefaultSortColumn $DefaultSortColumn -DefaultSortIndex $DefaultSortIndex -DefaultSortOrder $DefaultSortOrder `
         -Find $Find -OrderMulti:$OrderMulti `
         -Filtering:$Filtering -FilteringLocation $FilteringLocation `
-        -InvokeHTMLTags:$InvokeHTMLTags
+        -InvokeHTMLTags:$InvokeHTMLTags -DisableNewLine:$DisableNewLine
 }
