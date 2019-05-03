@@ -4,6 +4,12 @@ Dashimo is very simple, intuitive PowerShell generated HTML file. That's right. 
 
 ### Changelog
 
+- 0.0.8 - 3.05.2019
+  - More fixes
+  - More parameters
+  - added features (ability for Pre/post content for Table)
+  - added features (added container - for pre/post content alternative)
+
 - 0.0.2 - 4.04.2019 - https://evotec.xyz/dashimo-easy-table-conditional-formatting-and-more/
   - conditional formatting
   - more exposed parameters to Table
