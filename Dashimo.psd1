@@ -12,7 +12,7 @@
     RootModule = 'Dashimo.psm1'
 
     # Version number of this module.
-    ModuleVersion = '0.0.7'
+    ModuleVersion = '0.0.8'
 
     # Supported PSEditions
     # CompatiblePSEditions = @()
@@ -52,7 +52,7 @@
 
     # Modules that must be imported into the global environment prior to importing this module
     RequiredModules = @(@{ModuleName = 'PSSharedGoods'; GUID = 'ee272aa8-baaa-4edf-9f45-b6d6f7d844fe'; ModuleVersion = '0.0.75'; }, 
-        @{ModuleName = 'PSWriteHTML'; GUID = 'a7bdf640-f5cb-4acf-9de0-365b322d245c'; ModuleVersion = '0.0.31'; })
+        @{ModuleName = 'PSWriteHTML'; GUID = 'a7bdf640-f5cb-4acf-9de0-365b322d245c'; ModuleVersion = '0.0.32'; })
 
     # Assemblies that must be loaded prior to importing this module
     # RequiredAssemblies = @()

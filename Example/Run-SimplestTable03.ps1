@@ -1,9 +1,13 @@
-﻿$Process = Get-Process | Select-Object -First 1
+﻿$Process = Get-Process | Select-Object -First 30
 
 Dashboard -Name 'Dashimo Test' -FilePath $PSScriptRoot\DashboardEasy03.html -Show {
     Section -Name 'Test1' -TextAlignment left -TextBackGroundColor BlueViolet {
         Table -DataTable $Process
-        Table -DataTable $Process -PreContent {
+        Table -DataTable $Process {
+            TableConditionalFormatting -Name 'ID' -ComparisonType number -Operator gt -Value 16000 -Color BlueViolet -Row
+            TableConditionalFormatting -Name 'PriorityClass' -ComparisonType string -Operator eq -Value 'Normal' -BackgroundColor Gold
+            TableConditionalFormatting -Name 'PriorityClass' -ComparisonType string -Operator eq -Value 'Idle' -BackgroundColor Gold -Color Green
+        } -PreContent {
             New-HTMLText -Text 'TestPreContent' -Color Coral -Alignment center
         } -PostContent {
             # Notice how I'm adding table below another table in a very specific scenario
@@ -12,7 +16,7 @@ Dashboard -Name 'Dashimo Test' -FilePath $PSScriptRoot\DashboardEasy03.html -Sho
         }
     }
     Section -Name 'Test3' -BackgroundColor DarkOrange {
-        Table -DataTable $Process
+        Table -DataTable $Process -DisablePaging
         Container {
             # a different way to add post and pre content
             Table -DataTable $Process1
