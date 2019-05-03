@@ -6,12 +6,16 @@ function Section {
         [switch] $Collapsable,
         [switch] $Collapsed,
         [switch] $Invisible,
-        [RGBColors] $Text
+        [RGBColors] $TextColor = [RGBColors]::White,
+        [string][ValidateSet('center', 'left', 'right', 'justify')] $TextAlignment = 'center',
+        [RGBColors] $TextBackGroundColor = [RGBColors]::DeepSkyBlue,
+        [alias('BackgroundShade')][RGBColors]$BackgroundColor = [RGBColors]::None
     )
-    New-HTMLContent -HeaderText $Name -CanCollapse:$Collapsable -Invisible:$Invisible -Collapsed:$Collapsed {
-        $Object = Invoke-Command -ScriptBlock $Content
-        if ($null -ne $Object) {
-            $Object
-        }
-    }
+    New-HTMLSection -HeaderText $Name -CanCollapse:$Collapsable -Invisible:$Invisible `
+        -Collapsed:$Collapsed -HeaderTextColor $TextColor -HeaderTextAlignment $TextAlignment -HeaderBackGroundColor $TextBackGroundColor -BackgroundColor $BackgroundColor -Content $Content
+        #$Object = Invoke-Command -ScriptBlock $Content
+        #if ($null -ne $Object) {
+        #    $Object
+       # }
+   # }
 }
