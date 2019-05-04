@@ -1,6 +1,6 @@
 ﻿$Process = Get-Process | Select-Object -First 1
 
-Dashboard -Name 'Dashimo Test' -FilePath $PSScriptRoot\DashboardEasy02.html -Show {
+Dashboard -Name 'Dashimo Test' -FilePath $PSScriptRoot\DashboardEasy01.html -Show {
     Section -Name 'Test1' -TextAlignment left -TextBackGroundColor BlueViolet {
         Table -DataTable $Process
         Table -DataTable $Process
