@@ -1,7 +1,7 @@
 
 Import-Module Dashimo -Force
 Import-Module PSWinDocumentation.AD -Force
-Import-Module PSWinReporting
+Import-Module PSWinReportingV2
 
 if ($null -eq $DataSetForest) {
     $DataSetForest = Get-WinADForestInformation -Verbose -DontRemoveEmpty -PasswordQuality -Splitter "`r`n"
