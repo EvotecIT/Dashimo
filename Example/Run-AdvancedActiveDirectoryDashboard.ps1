@@ -4,13 +4,13 @@ Import-Module PSWinDocumentation.AD -Force
 Import-Module PSWinReporting
 
 if ($null -eq $DataSetForest) {
-    $DataSetForest = Get-WinADForestInformation -Verbose
+    $DataSetForest = Get-WinADForestInformation -Verbose -DontRemoveEmpty -PasswordQuality -Splitter "`r`n"
 }
 if ($null -eq $DataSetEvents) {
-    $DataSetEvents = Find-Events -Report UserChangesDetailed, UserChanges, UserLockouts, UserStatus, GroupChanges -Servers 'AD1', 'AD2' -DatesRange Last7days -Quiet
+   $DataSetEvents = Find-Events -Report ADUserChangesDetailed, ADUserChanges, ADUserLockouts, ADUserStatus, ADGroupChanges -Servers 'AD1', 'AD2' -DatesRange Last7days -Quiet
 }
 
-Dashboard -Name 'Dashimo Test' -FilePath $PSScriptRoot\DashboardActiveDirectory.html {
+Dashboard -Name 'Dashimo Test' -FilePath $PSScriptRoot\DashboardActiveDirectory.html -Show {
     Tab -Name 'Forest' {
         Section -Name 'Forest Information' -Invisible {
             Section -Name 'Forest Information' {
@@ -51,7 +51,7 @@ Dashboard -Name 'Dashimo Test' -FilePath $PSScriptRoot\DashboardActiveDirectory.
         }
     }
 
-    foreach ($Domain in $DataSetForest.Domains) {
+    foreach ($Domain in $DataSetForest.FoundDomains.Keys) {
         Tab -Name $Domain {
             Section -Name 'Domain Controllers / FSMO Roles' {
                 Panel {
