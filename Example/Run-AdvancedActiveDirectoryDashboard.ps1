@@ -108,16 +108,16 @@ Dashboard -Name 'Dashimo Test' -FilePath $PSScriptRoot\DashboardActiveDirectory.
     }
     Tab -Name 'Changes in Last 7 days' {
         Section -Name 'Group Changes' -Collapsable {
-            Table -HideFooter -DataTable $DataSetEvents.GroupChanges
+            Table -HideFooter -DataTable $DataSetEvents.ADGroupChanges
         }
         Section -Name 'User Status' -Collapsable {
-            Table -HideFooter -DataTable $DataSetEvents.UserStatus
+            Table -HideFooter -DataTable $DataSetEvents.ADUserStatus
         }
         Section -Name 'User Changes' -Collapsable {
-            Table -HideFooter -DataTable $DataSetEvents.GroupChanges
+            Table -HideFooter -DataTable $DataSetEvents.ADGroupChanges
         }
         Section -Name 'User Lockouts' -Collapsable {
-            Table -HideFooter -DataTable $DataSetEvents.UserStatus
+            Table -HideFooter -DataTable $DataSetEvents.ADUserStatus
         }
     }
 }
