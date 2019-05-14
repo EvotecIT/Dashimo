@@ -1,8 +1,8 @@
 <center>
 
-[![PowerShellGallery Version](https://img.shields.io/powershellgallery/v/Dashimo.svg)](https://www.powershellgallery.com/packages/PSWinReportingV2)
+[![PowerShellGallery Version](https://img.shields.io/powershellgallery/v/Dashimo.svg)](https://www.powershellgallery.com/packages/Dashimo)
 
-[![PowerShellGallery Platform](https://img.shields.io/powershellgallery/p/Dashimo.svg)](https://www.powershellgallery.com/packages/PSWinReportingV2)
+[![PowerShellGallery Platform](https://img.shields.io/powershellgallery/p/Dashimo.svg)](https://www.powershellgallery.com/packages/Dashimo)
 [![PowerShellGallery Preview Version](https://img.shields.io/powershellgallery/vpre/Dashimo.svg?label=powershell%20gallery%20preview&colorB=yellow)](https://www.powershellgallery.com/packages/Dashimo)
 
 ![Top Language](https://img.shields.io/github/languages/top/evotecit/Dashimo.svg)
