@@ -1,3 +1,17 @@
+<center>
+
+[![PowerShellGallery Version](https://img.shields.io/powershellgallery/v/Dashimo.svg)](https://www.powershellgallery.com/packages/PSWinReportingV2)
+
+[![PowerShellGallery Platform](https://img.shields.io/powershellgallery/p/Dashimo.svg)](https://www.powershellgallery.com/packages/PSWinReportingV2)
+[![PowerShellGallery Preview Version](https://img.shields.io/powershellgallery/vpre/Dashimo.svg?label=powershell%20gallery%20preview&colorB=yellow)](https://www.powershellgallery.com/packages/Dashimo)
+
+![Top Language](https://img.shields.io/github/languages/top/evotecit/Dashimo.svg)
+![Code](https://img.shields.io/github/languages/code-size/evotecit/Dashimo.svg)
+[![PowerShellGallery Downloads](https://img.shields.io/powershellgallery/dt/Dashimo.svg)](https://www.powershellgallery.com/packages/Dashimo)
+
+</center>
+
+
 # Dashimo - PowerShell Module
 
 Dashimo is very simple, intuitive PowerShell generated HTML file. That's right. A single, static HTML file that you can send to email or host on a website. Dashimo is based on [[PSWriteHTML](https://github.com/EvotecIT/PSWriteHTML)](https://evotec.xyz/wp-content/uploads/2019/04/img_5cafac409c12b.png) which I've written and is under development. What you can do in **Dashimo** you can do there and more. If you would like to help with development all code related to HTML/JS/CSS is on PSWriteHTML repo.
