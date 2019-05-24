@@ -28,6 +28,7 @@ function Table {
         [string[]] $DefaultSortColumn,
         [int[]] $DefaultSortIndex,
         [ValidateSet('Ascending', 'Descending')][string] $DefaultSortOrder = 'Ascending',
+        [array]$DateTimeSortingFormat,
         [alias('Search')][string]$Find,
         [switch] $InvokeHTMLTags,
         [switch] $DisableNewLine
@@ -40,7 +41,7 @@ function Table {
         -Style $Style -TextWhenNoData:$TextWhenNoData -ScreenSizePercent $ScreenSizePercent `
         -HTML $HTML -PreContent $PreContent -PostContent $PostContent `
         -DefaultSortColumn $DefaultSortColumn -DefaultSortIndex $DefaultSortIndex -DefaultSortOrder $DefaultSortOrder `
-        -Find $Find -OrderMulti:$OrderMulti `
+        -DateTimeSortingFormat $DateTimeSortingFormat -Find $Find -OrderMulti:$OrderMulti `
         -Filtering:$Filtering -FilteringLocation $FilteringLocation `
         -InvokeHTMLTags:$InvokeHTMLTags -DisableNewLine:$DisableNewLine
 }
