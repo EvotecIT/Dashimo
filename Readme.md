@@ -16,7 +16,7 @@ Dashimo is very simple, intuitive PowerShell generated HTML file. That's right. 
 
 ### Changelog
 
-- 0.0.10 - (**not released yet**)
+- 0.0.10 - 28.05.2019
   - Date Time formatting for Table (added by **Ferdi Weiner (ferwe)**)
 
 - 0.0.9 - 12.05.2019

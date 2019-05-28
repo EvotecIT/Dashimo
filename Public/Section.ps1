@@ -13,9 +13,4 @@ function Section {
     )
     New-HTMLSection -HeaderText $Name -CanCollapse:$Collapsable -Invisible:$Invisible `
         -Collapsed:$Collapsed -HeaderTextColor $TextColor -HeaderTextAlignment $TextAlignment -HeaderBackGroundColor $TextBackGroundColor -BackgroundColor $BackgroundColor -Content $Content
-        #$Object = Invoke-Command -ScriptBlock $Content
-        #if ($null -ne $Object) {
-        #    $Object
-       # }
-   # }
 }
