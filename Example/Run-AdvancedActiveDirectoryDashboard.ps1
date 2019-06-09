@@ -10,7 +10,7 @@ if ($null -eq $DataSetEvents) {
    $DataSetEvents = Find-Events -Report ADUserChangesDetailed, ADUserChanges, ADUserLockouts, ADUserStatus, ADGroupChanges -Servers 'AD1', 'AD2' -DatesRange Last7days -Quiet
 }
 
-Dashboard -Name 'Dashimo Test' -FilePath $PSScriptRoot\DashboardActiveDirectory.html -Show {
+Dashboard -Name 'Dashimo Test' -FilePath $PSScriptRoot\Output\DashboardActiveDirectory.html -Show {
     Tab -Name 'Forest' {
         Section -Name 'Forest Information' -Invisible {
             Section -Name 'Forest Information' {

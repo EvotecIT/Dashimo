@@ -3,7 +3,7 @@
 <head><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta name="author"/>
-<meta content="2019-05-04 00:22:12" name="revised"/>
+<meta content="2019-06-09 19:45:27" name="revised"/>
 <title>Dashimo Test</title>
 <!-- CSS Default fonts START -->
 <link href="https://fonts.googleapis.com/css?family=Roboto|Hammersmith+One|Questrial|Oswald" type="text/css" rel="stylesheet"/>
@@ -350,20 +350,6 @@ h6 {
 <!-- CSS Always Required Default Headings END -->
 
 
-
-<!-- JS Hide Section Code START -->
-<script type="text/javascript">function show(obj) {
-  document.getElementById(obj).style.display='block';
-  document.getElementById("hide_" + obj).style.display='';
-  document.getElementById("show_" + obj).style.display='none';
-}
-function hide(obj) {
-  document.getElementById(obj).style.display='none';
-  document.getElementById("hide_" + obj).style.display='none';
-  document.getElementById("show_" + obj).style.display='';
-}
-</script>
-<!-- JS Hide Section Code END -->
 <!-- CSS DataTables START -->
 <style type="text/css">/* Added to make sure plus logo fits in */
 td {
@@ -411,20 +397,6 @@ thead input {
 <!-- CSS DataTables END -->
 
 
-
-<!-- JS Hide Section Code START -->
-<script type="text/javascript">function show(obj) {
-  document.getElementById(obj).style.display='block';
-  document.getElementById("hide_" + obj).style.display='';
-  document.getElementById("show_" + obj).style.display='none';
-}
-function hide(obj) {
-  document.getElementById(obj).style.display='none';
-  document.getElementById("hide_" + obj).style.display='none';
-  document.getElementById("show_" + obj).style.display='';
-}
-</script>
-<!-- JS Hide Section Code END -->
 <!-- CSS DataTables START -->
 <style type="text/css">/* Added to make sure plus logo fits in */
 td {
@@ -523,26 +495,45 @@ td {
 <!-- CSS DataTables END -->
 <!-- JS DataTables START -->
 <script src="https://cdn.datatables.net/v/dt/jq-3.3.1/dt-1.10.18/af-2.3.2/b-1.5.4/b-colvis-1.5.4/b-html5-1.5.4/b-print-1.5.4/cr-1.5.0/fc-3.2.5/fh-3.1.4/kt-2.5.0/r-2.2.2/rg-1.1.0/rr-1.2.4/sc-1.5.0/sl-1.2.6/datatables.min.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js" type="text/javascript"></script>
+<script src="https://cdn.datatables.net/plug-ins/1.10.19/sorting/datetime-moment.js" type="text/javascript"></script>
 <!-- JS DataTables END -->
 </head>
 <!-- END HEADER -->
 <!-- BODY -->
-<body><div class="defaultSection defaultCard"><div class="defaultHeader" style="text-align:left;background-color:#ffff00"><a name="Test2" style="color: #000000;">Test2</a>
-<a id="show_1525984338" href="javascript:void(0)" onclick="show('1525984338');" style="color: #000000;">(Show)</a>
-<a id="hide_1525984338" href="javascript:void(0)" onclick="hide('1525984338');" style="color: #000000; display:none;">(Hide)</a>
+<body><div class="defaultSection defaultCard"><div class="defaultHeader" style="text-align:center;background-color:#00bfff"><a name="Test 4" style="color: #ffffff;">Test 4</a>
+<a id="show_75041486" href="javascript:void(0)" onclick="show('75041486');" style="color: #ffffff; display:none;">(Show)</a>
+<a id="hide_75041486" href="javascript:void(0)" onclick="hide('75041486');" style="color: #ffffff; display:none;">(Hide)</a>
 </div>
-<div Style="display:none;" id="1525984338" class="defaultContainerOther"><div class="defaultContainer defaultPanelOther collapsable" id="1525984338"><script>                $(document).ready(function() {
+<div id="75041486" class="defaultContainerOther"><div class="defaultContainer defaultPanelOther collapsable" id="75041486"><script>                $(document).ready(function() {
+                    $.fn.dataTable.moment( 'L' );
                     
                     
                     //  Table code
-                    var table = $('#DT-zIZetuBz').DataTable(
+                    var table = $('#DT-atFIHlVp').DataTable(
                         {
     "dom":  "Bfrtip",
     "buttons":  [
-
+                    {
+                        "extend":  "copyHtml5"
+                    },
+                    {
+                        "extend":  "excelHtml5"
+                    },
+                    {
+                        "extend":  "csvHtml5"
+                    },
+                    {
+                        "orientation":  "landscape",
+                        "extend":  "pdfHtml5",
+                        "pageSize":  "A3"
+                    },
+                    {
+                        "extend":  "pageLength"
+                    }
                 ],
     "colReorder":  true,
-    "paging":  false,
+    "paging":  true,
     "scrollCollapse":  false,
     "pagingType":  [
                        "full_numbers"
@@ -552,16 +543,16 @@ td {
                            15,
                            25,
                            50,
-                           100
+                           100,
+                           -1
                        ],
-                       -1,
                        [
                            15,
                            25,
                            50,
-                           100
-                       ],
-                       "All"
+                           100,
+                           "All"
+                       ]
                    ],
     "ordering":  true,
     "order":  [
@@ -573,44 +564,63 @@ td {
                        "details":  true
                    },
     "select":  true,
-    "searching":  false,
-    "stateSave":  true
+    "searching":  true,
+    "stateSave":  true,
+    "columnDefs":  ""
 }
                     );
                     
                 });</script>
 <div class="defaultPanelOther">
-<div><div Align="left"><span style="color:#1e90ff;text-align:left">TestPostContent</span></div></div>
-<table id="DT-zIZetuBz" class="display compact"><thead><tr><th>Name</th><th>PriorityClass</th><th>FileVersion</th><th>Handles</th><th>CPU</th></tr></thead>
-<tbody><tr><td>1Password</td><td>Normal</td><td>7.3.684</td><td>713</td><td>1,296875</td></tr>
-<tr><td>aesm_service</td><td></td><td></td><td>179</td><td></td></tr>
-<tr><td>ApplicationFrameHost</td><td>Normal</td><td>10.0.17763.1 (WinBuild.160101.0800)</td><td>563</td><td>2,859375</td></tr>
-<tr><td>browser_broker</td><td>Normal</td><td>11.00.17763.316 (WinBuild.160101.0800)</td><td>139</td><td>0,03125</td></tr>
-<tr><td>Calculator</td><td>Normal</td><td>10.1903.21.0</td><td>551</td><td>0,203125</td></tr>
-<tr><td>chrome</td><td>Normal</td><td>76.0.3782.0</td><td>912</td><td>1325,515625</td></tr>
-<tr><td>chrome</td><td>Idle</td><td>76.0.3782.0</td><td>558</td><td>474,8125</td></tr>
-<tr><td>chrome</td><td>Normal</td><td>76.0.3782.0</td><td>3041</td><td>2059,1875</td></tr>
-<tr><td>chrome</td><td>Normal</td><td>76.0.3782.0</td><td>316</td><td>0,828125</td></tr>
-<tr><td>chrome</td><td>Normal</td><td>76.0.3782.0</td><td>324</td><td>32,34375</td></tr>
-<tr><td>chrome</td><td>Idle</td><td>76.0.3782.0</td><td>399</td><td>1,875</td></tr>
-<tr><td>chrome</td><td>Normal</td><td>76.0.3782.0</td><td>368</td><td>0,5</td></tr>
-<tr><td>chrome</td><td>Normal</td><td>76.0.3782.0</td><td>311</td><td>0,234375</td></tr>
-<tr><td>chrome</td><td>Normal</td><td>76.0.3782.0</td><td>149</td><td>0,125</td></tr>
-<tr><td>chrome</td><td>Normal</td><td>76.0.3782.0</td><td>150</td><td>0,125</td></tr>
+<div><div Align="center"><span style="color:#1e90ff;text-align:center">TestPostContent</span></div></div>
+<table id="DT-atFIHlVp" class="display compact"><thead><tr><th>Name</th><th>PriorityClass</th><th>FileVersion</th><th>Handles</th><th>CPU</th></tr></thead>
+<tbody><tr><td>1Password</td><td>Normal</td><td>7.3.684</td><td>884</td><td>87,578125</td></tr>
+<tr><td>aesm_service</td><td></td><td></td><td>189</td><td></td></tr>
+<tr><td>ApplicationFrameHost</td><td>Normal</td><td>10.0.18362.1 (WinBuild.160101.0800)</td><td>495</td><td>0,3125</td></tr>
+<tr><td>audiodg</td><td></td><td></td><td>205</td><td>153,53125</td></tr>
+<tr><td>browser_broker</td><td>Normal</td><td>11.00.18362.1 (WinBuild.160101.0800)</td><td>135</td><td>0</td></tr>
+<tr><td>chrome</td><td>Normal</td><td>75.0.3770.80</td><td>810</td><td>202,78125</td></tr>
+<tr><td>chrome</td><td>Normal</td><td>75.0.3770.80</td><td>277</td><td>0,078125</td></tr>
+<tr><td>chrome</td><td>Normal</td><td>75.0.3770.80</td><td>292</td><td>18,9375</td></tr>
+<tr><td>chrome</td><td>Normal</td><td>75.0.3770.80</td><td>286</td><td>0,4375</td></tr>
+<tr><td>chrome</td><td>Normal</td><td>75.0.3770.80</td><td>324</td><td>15,265625</td></tr>
+<tr><td>chrome</td><td>Normal</td><td>75.0.3770.80</td><td>321</td><td>0,09375</td></tr>
+<tr><td>chrome</td><td>Normal</td><td>75.0.3770.80</td><td>543</td><td>61,375</td></tr>
+<tr><td>chrome</td><td>Normal</td><td>75.0.3770.80</td><td>2851</td><td>561,453125</td></tr>
+<tr><td>chrome</td><td>Normal</td><td>75.0.3770.80</td><td>297</td><td>15</td></tr>
+<tr><td>chrome</td><td>Idle</td><td>75.0.3770.80</td><td>372</td><td>1,578125</td></tr>
 </tbody>
+<tfoot><tr><th>Name</th><th>PriorityClass</th><th>FileVersion</th><th>Handles</th><th>CPU</th></tr></tfoot>
 </table>
 <script>                $(document).ready(function() {
+                    $.fn.dataTable.moment( 'L' );
                     
                     
                     //  Table code
-                    var table = $('#DT-QAYMVniM').DataTable(
+                    var table = $('#DT-jdByadYM').DataTable(
                         {
     "dom":  "Bfrtip",
     "buttons":  [
-
+                    {
+                        "extend":  "copyHtml5"
+                    },
+                    {
+                        "extend":  "excelHtml5"
+                    },
+                    {
+                        "extend":  "csvHtml5"
+                    },
+                    {
+                        "orientation":  "landscape",
+                        "extend":  "pdfHtml5",
+                        "pageSize":  "A3"
+                    },
+                    {
+                        "extend":  "pageLength"
+                    }
                 ],
     "colReorder":  true,
-    "paging":  false,
+    "paging":  true,
     "scrollCollapse":  false,
     "pagingType":  [
                        "full_numbers"
@@ -620,16 +630,16 @@ td {
                            15,
                            25,
                            50,
-                           100
+                           100,
+                           -1
                        ],
-                       -1,
                        [
                            15,
                            25,
                            50,
-                           100
-                       ],
-                       "All"
+                           100,
+                           "All"
+                       ]
                    ],
     "ordering":  true,
     "order":  [
@@ -641,31 +651,33 @@ td {
                        "details":  true
                    },
     "select":  true,
-    "searching":  false,
-    "stateSave":  true
+    "searching":  true,
+    "stateSave":  true,
+    "columnDefs":  ""
 }
                     );
                     
                 });</script>
 <div class="defaultPanelOther">
-<div><div Align="Left"><span style="color:#1e90ff;text-align:Left">TestPostContent</span></div></div>
-<table id="DT-QAYMVniM" class="display compact"><thead><tr><th>Name</th><th>PriorityClass</th><th>FileVersion</th><th>Handles</th><th>CPU</th></tr></thead>
-<tbody><tr><td>1Password</td><td>Normal</td><td>7.3.684</td><td>713</td><td>1,296875</td></tr>
-<tr><td>aesm_service</td><td></td><td></td><td>179</td><td></td></tr>
-<tr><td>ApplicationFrameHost</td><td>Normal</td><td>10.0.17763.1 (WinBuild.160101.0800)</td><td>563</td><td>2,859375</td></tr>
-<tr><td>browser_broker</td><td>Normal</td><td>11.00.17763.316 (WinBuild.160101.0800)</td><td>139</td><td>0,03125</td></tr>
-<tr><td>Calculator</td><td>Normal</td><td>10.1903.21.0</td><td>551</td><td>0,203125</td></tr>
-<tr><td>chrome</td><td>Normal</td><td>76.0.3782.0</td><td>912</td><td>1325,515625</td></tr>
-<tr><td>chrome</td><td>Idle</td><td>76.0.3782.0</td><td>558</td><td>474,8125</td></tr>
-<tr><td>chrome</td><td>Normal</td><td>76.0.3782.0</td><td>3041</td><td>2059,1875</td></tr>
-<tr><td>chrome</td><td>Normal</td><td>76.0.3782.0</td><td>316</td><td>0,828125</td></tr>
-<tr><td>chrome</td><td>Normal</td><td>76.0.3782.0</td><td>324</td><td>32,34375</td></tr>
-<tr><td>chrome</td><td>Idle</td><td>76.0.3782.0</td><td>399</td><td>1,875</td></tr>
-<tr><td>chrome</td><td>Normal</td><td>76.0.3782.0</td><td>368</td><td>0,5</td></tr>
-<tr><td>chrome</td><td>Normal</td><td>76.0.3782.0</td><td>311</td><td>0,234375</td></tr>
-<tr><td>chrome</td><td>Normal</td><td>76.0.3782.0</td><td>149</td><td>0,125</td></tr>
-<tr><td>chrome</td><td>Normal</td><td>76.0.3782.0</td><td>150</td><td>0,125</td></tr>
+<div><div Align="center"><span style="color:#1e90ff;text-align:center">TestPostContent</span></div></div>
+<table id="DT-jdByadYM" class="display compact"><thead><tr><th>Name</th><th>PriorityClass</th><th>FileVersion</th><th>Handles</th><th>CPU</th></tr></thead>
+<tbody><tr><td>1Password</td><td>Normal</td><td>7.3.684</td><td>884</td><td>87,578125</td></tr>
+<tr><td>aesm_service</td><td></td><td></td><td>189</td><td></td></tr>
+<tr><td>ApplicationFrameHost</td><td>Normal</td><td>10.0.18362.1 (WinBuild.160101.0800)</td><td>495</td><td>0,3125</td></tr>
+<tr><td>audiodg</td><td></td><td></td><td>205</td><td>153,53125</td></tr>
+<tr><td>browser_broker</td><td>Normal</td><td>11.00.18362.1 (WinBuild.160101.0800)</td><td>135</td><td>0</td></tr>
+<tr><td>chrome</td><td>Normal</td><td>75.0.3770.80</td><td>810</td><td>202,78125</td></tr>
+<tr><td>chrome</td><td>Normal</td><td>75.0.3770.80</td><td>277</td><td>0,078125</td></tr>
+<tr><td>chrome</td><td>Normal</td><td>75.0.3770.80</td><td>292</td><td>18,9375</td></tr>
+<tr><td>chrome</td><td>Normal</td><td>75.0.3770.80</td><td>286</td><td>0,4375</td></tr>
+<tr><td>chrome</td><td>Normal</td><td>75.0.3770.80</td><td>324</td><td>15,265625</td></tr>
+<tr><td>chrome</td><td>Normal</td><td>75.0.3770.80</td><td>321</td><td>0,09375</td></tr>
+<tr><td>chrome</td><td>Normal</td><td>75.0.3770.80</td><td>543</td><td>61,375</td></tr>
+<tr><td>chrome</td><td>Normal</td><td>75.0.3770.80</td><td>2851</td><td>561,453125</td></tr>
+<tr><td>chrome</td><td>Normal</td><td>75.0.3770.80</td><td>297</td><td>15</td></tr>
+<tr><td>chrome</td><td>Idle</td><td>75.0.3770.80</td><td>372</td><td>1,578125</td></tr>
 </tbody>
+<tfoot><tr><th>Name</th><th>PriorityClass</th><th>FileVersion</th><th>Handles</th><th>CPU</th></tr></tfoot>
 </table>
 
 </div>
@@ -675,7 +687,6 @@ td {
 <!-- END BODY -->
 <!-- FOOTER -->
 <footer>
-
 
 
 </footer>

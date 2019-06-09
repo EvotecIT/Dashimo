@@ -3,7 +3,7 @@ $Process = Get-Process | Select-Object -First 30
 $Process1 = Get-Process | Select-Object -First 5
 $Process2 = Get-Process | Select-Object -First 10
 
-Dashboard -Name 'Dashimo Test' -FilePath $PSScriptRoot\DashboardEasyConditions.html -Show {
+Dashboard -Name 'Dashimo Test' -FilePath $PSScriptRoot\Output\DashboardEasyConditions.html -Show {
     Tab -Name 'First tab' {
         Section -Name 'Test' {
             Table -DataTable $Process {
