@@ -1,6 +1,6 @@
 ﻿Import-Module Dashimo -Force
 
-Dashboard -Name 'My title' -FilePath $PSScriptRoot\Output\DashboardTabsCharts.html {
+Dashboard -Name 'Charts - Bar' -FilePath $PSScriptRoot\Output\DashboardChartsBar.html {
     TabOptions -SlimTabs
     Tab -Name 'Bar Charts - Bar' -IconRegular chart-bar {
         Section -Name 'Bar Charts - Test' -Collapsable {
@@ -14,7 +14,8 @@ Dashboard -Name 'My title' -FilePath $PSScriptRoot\Output\DashboardTabsCharts.ht
             }
             Panel {
                 Chart {
-                    ChartLegend -Name 'Time'
+                    ChartToolbar -Download
+                    ChartLegend -Name 'Time', 'Money', 'Taxes'
                     ChartBar -Name 'Test' -Value 1, 2, 3
                     ChartBar -Name 'Test1' -Value 2, 5, 7
                     ChartBar -Name 'Test2' -Value 3, 1, 2
@@ -28,9 +29,53 @@ Dashboard -Name 'My title' -FilePath $PSScriptRoot\Output\DashboardTabsCharts.ht
                     }
                 }
             }
+            Panel {
+                Chart {
+                    ChartBarOptions -Vertical -DataLabelsColor GreenYellow
+                    ChartLegend -Name 'Time'
+                    for ($i = 0; $i -le 5; $i++) {
+                        ChartBar -Name "Test $i" -Value $i
+                    }
+                }
+            }
+        }
+        Section -Name 'Bar Charts - Test Colors' -Collapsable {
+            Panel -Invisible {
+                Chart {
+                    ChartLegend -Name 'Time'
+                    ChartBar -Name 'Test' -Value 1
+                    ChartBar -Name 'Test1' -Value 2
+                    ChartBar -Name 'Test2' -Value 3
+                }
+            }
+            Panel -Invisible {
+                Chart {
+                    ChartLegend -Name 'Time', 'Money', 'Taxes'
+                    ChartBar -Name 'Test' -Value 1, 2, 3
+                    ChartBar -Name 'Test1' -Value 2, 5, 7
+                    ChartBar -Name 'Test2' -Value 3, 1, 2
+                }
+            }
+            Panel -Invisible {
+                Chart {
+                    ChartLegend -Name 'Time'
+                    for ($i = 0; $i -le 5; $i++) {
+                        ChartBar -Name "Test $i" -Value $i
+                    }
+                }
+            }
+            Panel -Invisible {
+                Chart {
+                    ChartBarOptions -Vertical -DataLabelsColor GreenYellow
+                    ChartLegend -Name 'Time'
+                    for ($i = 0; $i -le 5; $i++) {
+                        ChartBar -Name "Test $i" -Value $i
+                    }
+                }
+            }
         }
         Section -Name 'Bar Charts - Standard Bar' -Collapsable {
-            # One way to build charts
+
             Panel {
                 $Data1 = 400, 430, 448, 470, 540, 580, 690, 1100, 1200, 1380
                 $DataNames1 = 'South Korea', 'Canada', 'United Kingdom', 'Netherlands', 'Italy', 'France', 'Japan', 'United States', 'China', 'Germany'
@@ -41,14 +86,70 @@ Dashboard -Name 'My title' -FilePath $PSScriptRoot\Output\DashboardTabsCharts.ht
                     }
                 }
             }
-            # One way to build charts but with 2 values
+
             Panel {
                 $Data1 = 44, 55, 41, 64, 22, 43, 21
                 $Data2 = 53, 32, 33, 52, 13, 44, 32
                 $DataNames1 = 2001, 2002, 2003, 2004, 2005, 2006, 2007
-                #ChartBar -Data $Data1, $Data2 -DataNames $DataNames1 -DataLegend 'Born', 'Died'
+
                 Chart -Title 'Born vs Dead' -TitleAlignment center {
                     #ChartBarOptions
+                    ChartLegend -Name 'Born', 'Died'
+                    for ($i = 0; $i -lt $Data1.Count; $i++) {
+                        ChartBar -Name $DataNames1[$i] -Value $Data1[$i], $Data2[$i]
+                    }
+                }
+            }
+        }
+        Section -Name 'Bar Charts - Standard Bar Vertical' -Collapsable {
+
+            Panel {
+                $Data1 = 400, 430, 448, 470, 540, 580, 690, 1100, 1200, 1380
+                $DataNames1 = 'South Korea', 'Canada', 'United Kingdom', 'Netherlands', 'Italy', 'France', 'Japan', 'United States', 'China', 'Germany'
+                Chart {
+                    ChartBarOptions -Vertical
+                    ChartLegend -Name 'Number of bottles'
+                    for ($i = 0; $i -lt $Data1.Count; $i++) {
+                        ChartBar -Name $DataNames1[$i] -Value $Data1[$i]
+                    }
+                }
+            }
+
+            Panel {
+                $Data1 = 44, 55, 41, 64, 22, 43, 21
+                $Data2 = 53, 32, 33, 52, 13, 44, 32
+                $DataNames1 = 2001, 2002, 2003, 2004, 2005, 2006, 2007
+
+                Chart -Title 'Born vs Dead' -TitleAlignment center {
+                    ChartBarOptions -Vertical
+                    ChartLegend -Name 'Born', 'Died'
+                    for ($i = 0; $i -lt $Data1.Count; $i++) {
+                        ChartBar -Name $DataNames1[$i] -Value $Data1[$i], $Data2[$i]
+                    }
+                }
+            }
+        }
+        Section -Name 'Bar Charts - Standard Bar Vertical & Patterned' -Collapsable {
+
+            Panel {
+                $Data1 = 400, 430, 448, 470, 540, 580, 690, 1100, 1200, 1380
+                $DataNames1 = 'South Korea', 'Canada', 'United Kingdom', 'Netherlands', 'Italy', 'France', 'Japan', 'United States', 'China', 'Germany'
+                Chart {
+                    ChartBarOptions -Vertical -Patterned
+                    ChartLegend -Name 'Number of bottles'
+                    for ($i = 0; $i -lt $Data1.Count; $i++) {
+                        ChartBar -Name $DataNames1[$i] -Value $Data1[$i]
+                    }
+                }
+            }
+
+            Panel {
+                $Data1 = 44, 55, 41, 64, 22, 43, 21
+                $Data2 = 53, 32, 33, 52, 13, 44, 32
+                $DataNames1 = 2001, 2002, 2003, 2004, 2005, 2006, 2007
+
+                Chart -Title 'Born vs Dead' -TitleAlignment center {
+                    ChartBarOptions -Vertical -Patterned
                     ChartLegend -Name 'Born', 'Died'
                     for ($i = 0; $i -lt $Data1.Count; $i++) {
                         ChartBar -Name $DataNames1[$i] -Value $Data1[$i], $Data2[$i]
@@ -91,7 +192,7 @@ Dashboard -Name 'My title' -FilePath $PSScriptRoot\Output\DashboardTabsCharts.ht
             }
         }
     }
-    Tab -Name 'Bar Charts - Bar Stacked 100%' {
+    Tab -Name 'Bar Charts - Bar Stacked 100%' -IconSolid audio-description {
         Section -Name 'Bar Charts - Stacked 100%' -Collapsable {
             Panel {
                 $Data1 = 44, 55, 41, 37, 22, 43, 21
@@ -122,7 +223,7 @@ Dashboard -Name 'My title' -FilePath $PSScriptRoot\Output\DashboardTabsCharts.ht
             }
         }
     }
-    Tab -Name 'Bar Charts - Bar Stacked Plus/Minus' {
+    Tab -Name 'Bar Charts - Bar Stacked Plus/Minus' -IconRegular file {
         Section -Name 'Bar Charts - Stacked 100%' -Collapsable {
             Panel {
                 $Data1 = -0.8, -1.05, -1.06, -1.18, -1.4, -2.2, -2.85, -3.7, -3.96, -4.22, -4.3, -4.4, -4.1, -4, -4.1, -3.4, -3.1, -2.8
@@ -142,7 +243,18 @@ Dashboard -Name 'My title' -FilePath $PSScriptRoot\Output\DashboardTabsCharts.ht
 
             }
             Panel {
+                $Data1 = -0.8, -1.05, -1.06, -1.18, -1.4, -2.2, -2.85, -3.7, -3.96, -4.22, -4.3, -4.4, -4.1, -4, -4.1, -3.4, -3.1, -2.8
+                $Data2 = 0.4, 0.65, 0.76, 0.88, 1.5, 2.1, 2.9, 3.8, 3.9, 4.2, 4, 4.3, 4.1, 4.2, 4.5, 3.9, 3.5, 3
+                $DataLegend = 'Males', 'Females' # should match amount of data sets
+                $DataNames = '85+', '80-84', '75-79', '70-74', '65-69', '60-64', '55-59', '50-54', '45-49', '40-44', '35-39', '30-34', '25-29', '20-24', '15-19', '10-14', '5-9', '0-4'
 
+                Chart -Title 'Mauritius population pyramid 2011' {
+                    ChartBarOptions -Type barStacked -Vertical
+                    ChartLegend -Names $DataLegend -LegendPosition top
+                    for ($i = 0; $i -lt $Data1.Count; $i++) {
+                        ChartBar -Name $DataNames[$i] -Value $Data1[$i], $Data2[$i]
+                    }
+                }
             }
         }
     }

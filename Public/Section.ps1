@@ -3,7 +3,7 @@ function Section {
     param(
         [Parameter(Position = 0)][ValidateNotNull()][ScriptBlock] $Content = $(Throw "Section requires opening and closing brace."),
         [string] $Name,
-        [switch] $Collapsable,
+        [alias('CanCollapse')][switch] $Collapsable,
         [switch] $Collapsed,
         [switch] $Invisible,
         [RGBColors] $TextColor = [RGBColors]::White,
