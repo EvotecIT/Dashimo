@@ -16,6 +16,13 @@ Dashimo is very simple, intuitive PowerShell generated HTML file. That's right. 
 
 ### Changelog
 
+- 0.0.11 - 17.06.2019
+  - Support for Bar Charts / Line charts
+  - Support for Icons in Tabs
+  - Support for Tabs options
+  - Lots of small fixes
+  - Couple of new features
+
 - 0.0.10 - 28.05.2019
   - Date Time formatting for Table (added by **Ferdi Weiner (ferwe)**)
 
