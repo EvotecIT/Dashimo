@@ -16,7 +16,7 @@ Dashimo is very simple, intuitive PowerShell generated HTML file. That's right. 
 
 ### Changelog
 
-- 0.0.11 - 17.06.2019
+- 0.0.11 - 17.06.2019 - http://evotec.xyz/dashimo-pswritehtml-charting-icons-and-few-other-changes
   - Support for Bar Charts / Line charts
   - Support for Icons in Tabs
   - Support for Tabs options
