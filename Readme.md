@@ -14,6 +14,26 @@
 
 Dashimo is very simple, intuitive PowerShell generated HTML file. That's right. A single, static HTML file that you can send to email or host on a website. Dashimo is based on [PSWriteHTML](https://github.com/EvotecIT/PSWriteHTML) which I've written and is under development. What you can do in **Dashimo** you can do there and more. If you would like to help with development all code related to **HTML/JS/CSS** is on **PSWriteHTML** repo.
 
+### How to Install
+
+While you can take sources and use it from here, **Dashimo** actually is composed of multiple other of my modules. To get it up and running you will neeed **PSWriteHTML**. **PSWriteHTML** will need **PSSharedGoods**, and **PSSharedGoods** will need **Connectimo** and **PSWriteColor**. You can get all that from sources but if you **just want** to use my modules you should use `Install-Module` command. It's available in PowerShell 5.1.
+
+Simply use:
+
+```powershell
+Install-Module Dashimo
+```
+
+And to update
+
+```powershell
+Update-Module Dashimo
+```
+
+That's it. Whenever there's new version you simply run the command and you can enjoy it. Remember, that you may need to close, reopen PowerShell session if you have already used module before updating it.
+
+**The important thing** is if something works for you on production, keep using it till you test the new version on a test computer. I do changes that may not be big, but big enough that auto-update will break your code. For example, small rename to a parameter and your code stops working! Be responsible!
+
 ### Changelog
 
 - 0.0.12 - 20.06.2019
