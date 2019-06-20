@@ -16,7 +16,7 @@ Dashimo is very simple, intuitive PowerShell generated HTML file. That's right. 
 
 ### How to Install
 
-While you can take sources and use it from here, **Dashimo** actually is composed of multiple other of my modules. To get it up and running you will neeed **PSWriteHTML**. **PSWriteHTML** will need **PSSharedGoods**, and **PSSharedGoods** will need **Connectimo** and **PSWriteColor**. You can get all that from sources but if you **just want** to use my modules you should use `Install-Module` command. It's available in PowerShell 5.1.
+While you can take sources and use it from here, **Dashimo** actually is composed of multiple other of my modules. To get it up and running you will neeed **PSWriteHTML**. **PSWriteHTML** will need **PSSharedGoods**, and **PSSharedGoods** will need **Connectimo** and **PSWriteColor**. You can get all that from sources but if you **just want** to use my modules you should use `Install-Module` command. It's available in PowerShell 5.1. As an added bonus when I publish modules to **PowerShellGallery** I remove any junk, minimize modules to a single file which makes them faster to load and use. I really encourage you to use module from PowerShellGallery and treat **GitHub** as highely development version.
 
 Simply use:
 
