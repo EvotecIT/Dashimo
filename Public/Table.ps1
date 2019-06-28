@@ -31,7 +31,16 @@ function Table {
         [string[]]$DateTimeSortingFormat,
         [alias('Search')][string]$Find,
         [switch] $InvokeHTMLTags,
-        [switch] $DisableNewLine
+        [switch] $DisableNewLine,
+        [switch] $ScrollX,
+        [switch] $ScrollY,
+        [int] $ScrollSizeY = 500,
+        [int] $FreezeColumnsLeft,
+        [int] $FreezeColumnsRight,
+        [switch] $FixedHeader,
+        [switch] $FixedFooter,
+        [string[]] $ResponsivePriorityOrder,
+        [int[]] $ResponsivePriorityOrderIndex
     )
     New-HTMLTable -DataTable $DataTable `
         -HideFooter:$HideFooter `
@@ -43,5 +52,7 @@ function Table {
         -DefaultSortColumn $DefaultSortColumn -DefaultSortIndex $DefaultSortIndex -DefaultSortOrder $DefaultSortOrder `
         -DateTimeSortingFormat $DateTimeSortingFormat -Find $Find -OrderMulti:$OrderMulti `
         -Filtering:$Filtering -FilteringLocation $FilteringLocation `
-        -InvokeHTMLTags:$InvokeHTMLTags -DisableNewLine:$DisableNewLine
+        -InvokeHTMLTags:$InvokeHTMLTags -DisableNewLine:$DisableNewLine -ScrollX:$ScrollX -ScrollY:$ScrollY -ScrollSizeY $ScrollSizeY `
+        -FreezeColumnsLeft $FreezeColumnsLeft -FreezeColumnsRight $FreezeColumnsRight `
+        -FixedHeader:$FixedHeader -FixedFooter:$FixedFooter -ResponsivePriorityOrder $ResponsivePriorityOrder -ResponsivePriorityOrderIndex $ResponsivePriorityOrderIndex
 }
