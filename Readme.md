@@ -1,13 +1,21 @@
-<center>
+<p align="center">
+  <a href="https://www.powershellgallery.com/packages/Dashimo"><img src="https://img.shields.io/powershellgallery/v/Dashimo.svg"></a>
+  <a href="https://www.powershellgallery.com/packages/Dashimo"><img src="https://img.shields.io/powershellgallery/vpre/Dashimo.svg?label=powershell%20gallery%20preview&colorB=yellow"></a>
+  <a href="https://github.com/EvotecIT/Dashimo"><img src="https://img.shields.io/github/license/EvotecIT/Dashimo.svg"></a>
+</p>
 
-[![PowerShellGallery Version](https://img.shields.io/powershellgallery/v/Dashimo.svg)](https://www.powershellgallery.com/packages/Dashimo)
-[![PowerShellGallery Platform](https://img.shields.io/powershellgallery/p/Dashimo.svg)](https://www.powershellgallery.com/packages/Dashimo)
-[![PowerShellGallery Preview Version](https://img.shields.io/powershellgallery/vpre/Dashimo.svg?label=powershell%20gallery%20preview&colorB=yellow)](https://www.powershellgallery.com/packages/Dashimo)
-![Top Language](https://img.shields.io/github/languages/top/evotecit/Dashimo.svg)
-![Code](https://img.shields.io/github/languages/code-size/evotecit/Dashimo.svg)
-[![PowerShellGallery Downloads](https://img.shields.io/powershellgallery/dt/Dashimo.svg)](https://www.powershellgallery.com/packages/Dashimo)
+<p align="center">
+  <a href="https://www.powershellgallery.com/packages/Dashimo"><img src="https://img.shields.io/powershellgallery/p/Dashimo.svg"></a>
+  <a href="https://github.com/EvotecIT/Dashimo"><img src="https://img.shields.io/github/languages/top/evotecit/Dashimo.svg"></a>
+  <a href="https://github.com/EvotecIT/Dashimo"><img src="https://img.shields.io/github/languages/code-size/evotecit/Dashimo.svg"></a>
+  <a href="https://github.com/EvotecIT/Dashimo"><img src="https://img.shields.io/powershellgallery/dt/Dashimo.svg"></a>
+</p>
 
-</center>
+<p align="center">
+  <a href="https://twitter.com/PrzemyslawKlys"><img src="https://img.shields.io/twitter/follow/PrzemyslawKlys.svg?label=Twitter%20%40PrzemyslawKlys&style=social"></a>
+  <a href="https://evotec.xyz/hub"><img src="https://img.shields.io/badge/Blog-evotec.xyz-2A6496.svg"></a>
+  <a href="https://www.linkedin.com/in/pklys"><img src="https://img.shields.io/badge/LinkedIn-pklys-0077B5.svg?logo=LinkedIn"></a>
+</p>
 
 
 # Dashimo - PowerShell Module
@@ -35,6 +43,17 @@ That's it. Whenever there's new version you simply run the command and you can e
 **The important thing** is if something works for you on production, keep using it till you test the new version on a test computer. I do changes that may not be big, but big enough that auto-update will break your code. For example, small rename to a parameter and your code stops working! Be responsible!
 
 ### Changelog
+
+- 0.0.13 - 2019.06.29 - https://evotec.xyz/all-your-html-tables-are-belong-to-us/
+  - [x] Table features
+    - [x] FixedHeader/FixedFooter options
+    - [x] Scrolling
+      - ScrollX,
+      - ScrollY, ScrollSizeY
+      - FreezeColumnsLeft, FreezeColumnsRight
+    - [x] ResponivePriorityOrder, ResponsivePriorityOrderIndex
+  - [x] TableHeader - **new command**
+    - [x] Mergin header, styling header, adding header row
 
 - 0.0.12 - 20.06.2019
   - Fix for DefaultSortColumn
