@@ -44,6 +44,13 @@ That's it. Whenever there's new version you simply run the command and you can e
 
 ### Changelog
 
+- 0.0.14 - 2019.06.30
+  - [x] TableHeader - removing need for AddRow switch
+    - [ ] If used with only Title it will assume AddRow
+    - [ ] If used with Names it will assume merging
+    - [ ] If used with Names without Title it will assume styling
+    - [ ] Left AddRow for compatibility reasons, may remove it in future
+
 - 0.0.13 - 2019.06.29 - https://evotec.xyz/all-your-html-tables-are-belong-to-us/
   - [x] Table features
     - [x] FixedHeader/FixedFooter options
