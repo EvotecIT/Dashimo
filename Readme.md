@@ -44,6 +44,10 @@ That's it. Whenever there's new version you simply run the command and you can e
 
 ### Changelog
 
+- 0.0.15 - 2019.07.01
+  - [x] New-HTMLTableConditionalFormatting
+    - [ ] Fix for Powershell Core, where conditional formatting wouldn't show up
+
 - 0.0.14 - 2019.06.30
   - [x] TableHeader - removing need for AddRow switch
     - [ ] If used with only Title it will assume AddRow
