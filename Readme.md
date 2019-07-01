@@ -44,6 +44,10 @@ That's it. Whenever there's new version you simply run the command and you can e
 
 ### Changelog
 
+- 0.0.16 - 2019.07.01
+  - [x] New-HTMLTable
+    - [ ] Fix for ScrollX with low amount of columns
+
 - 0.0.15 - 2019.07.01
   - [x] New-HTMLTableConditionalFormatting
     - [ ] Fix for Powershell Core, where conditional formatting wouldn't show up
