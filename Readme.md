@@ -44,6 +44,13 @@ That's it. Whenever there's new version you simply run the command and you can e
 
 ### Changelog
 
+- 0.0.17 - 2019.07.08
+  - [x] New-HTMLTable
+    - [ ] Small improvement when no data provided
+  - [x] New-HTMLTableCondition
+    - [ ] Supports contains now - PR by Adam Cook (codamok)
+  - [ ] Removed ColorSchemes - removal of ReportHTML old code
+
 - 0.0.16 - 2019.07.01
   - [x] New-HTMLTable
     - [ ] Fix for ScrollX with low amount of columns
