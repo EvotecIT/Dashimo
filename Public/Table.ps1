@@ -40,7 +40,8 @@ function Table {
         [switch] $FixedHeader,
         [switch] $FixedFooter,
         [string[]] $ResponsivePriorityOrder,
-        [int[]] $ResponsivePriorityOrderIndex
+        [int[]] $ResponsivePriorityOrderIndex,
+        [string[]] $PriorityProperties
     )
     New-HTMLTable -DataTable $DataTable `
         -HideFooter:$HideFooter `
@@ -54,5 +55,5 @@ function Table {
         -Filtering:$Filtering -FilteringLocation $FilteringLocation `
         -InvokeHTMLTags:$InvokeHTMLTags -DisableNewLine:$DisableNewLine -ScrollX:$ScrollX -ScrollY:$ScrollY -ScrollSizeY $ScrollSizeY `
         -FreezeColumnsLeft $FreezeColumnsLeft -FreezeColumnsRight $FreezeColumnsRight `
-        -FixedHeader:$FixedHeader -FixedFooter:$FixedFooter -ResponsivePriorityOrder $ResponsivePriorityOrder -ResponsivePriorityOrderIndex $ResponsivePriorityOrderIndex
+        -FixedHeader:$FixedHeader -FixedFooter:$FixedFooter -ResponsivePriorityOrder $ResponsivePriorityOrder -ResponsivePriorityOrderIndex $ResponsivePriorityOrderIndex -PriorityProperties $PriorityProperties
 }

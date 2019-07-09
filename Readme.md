@@ -44,19 +44,23 @@ That's it. Whenever there's new version you simply run the command and you can e
 
 ### Changelog
 
+- 0.0.18 - 2019.07.09
+  - [x] Table
+    - [ ] Added $PriorityProperties parameter - it works also on ScrollX and other types of places contrary to ResponsivePriorityProperties which only works on Responsive Table
+
 - 0.0.17 - 2019.07.08
-  - [x] New-HTMLTable
+  - [x] Table
     - [ ] Small improvement when no data provided
-  - [x] New-HTMLTableCondition
+  - [x] TableCondition
     - [ ] Supports contains now - PR by Adam Cook (codamok)
   - [ ] Removed ColorSchemes - removal of ReportHTML old code
 
 - 0.0.16 - 2019.07.01
-  - [x] New-HTMLTable
+  - [x] Table
     - [ ] Fix for ScrollX with low amount of columns
 
 - 0.0.15 - 2019.07.01
-  - [x] New-HTMLTableConditionalFormatting
+  - [x] TableConditionalFormatting
     - [ ] Fix for Powershell Core, where conditional formatting wouldn't show up
 
 - 0.0.14 - 2019.06.30
