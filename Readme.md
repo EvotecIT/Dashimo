@@ -44,6 +44,10 @@ That's it. Whenever there's new version you simply run the command and you can e
 
 ### Changelog
 
+- 0.0.19 - 2019.07.12
+  - [x] Table
+    - [ ] Fix for Buttons - Add pageLength to Table button validation set - PR by dizech
+
 - 0.0.18 - 2019.07.09
   - [x] Table
     - [ ] Added $PriorityProperties parameter - it works also on ScrollX and other types of places contrary to ResponsivePriorityProperties which only works on Responsive Table
