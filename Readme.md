@@ -44,6 +44,10 @@ That's it. Whenever there's new version you simply run the command and you can e
 
 ### Changelog
 
+- 0.0.20
+  - [X] TableConditionalFormatting
+    - Function was moved to PSWriteHTML (as an alias to New-HTMLTableConditionalFormatting) due to added benefits. It has much more functionality now.
+
 - 0.0.19 - 2019.07.12
   - [x] Table
     - [ ] Fix for Buttons - Add pageLength to Table button validation set - PR by dizech
