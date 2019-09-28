@@ -22,6 +22,17 @@
 
 Dashimo is very simple, intuitive PowerShell generated HTML file. That's right. A single, static HTML file that you can send to email or host on a website. Dashimo is based on [PSWriteHTML](https://github.com/EvotecIT/PSWriteHTML) which I've written and is under development. What you can do in **Dashimo** you can do there and more. If you would like to help with development all code related to **HTML/JS/CSS** is on **PSWriteHTML** repo.
 
+## IMPORTANT
+
+**Dashimo** project has been integrated back to [PSWriteHTML](https://github.com/EvotecIT/PSWriteHTML). This project is now **ARCHIVED**. Dashimo syntax will live as part of PSWriteHTML aliases.
+
+```PowerShell
+Uninstall-Module Dashimo -AllVersions
+Install-Module PSWriteHTML -Force
+```
+
+Everything below is now a bit irrelevant. Leaving this for historical reasons.
+
 ### How to Install
 
 While you can take sources and use it from here, **Dashimo** actually is composed of multiple other of my modules. To get it up and running you will neeed **PSWriteHTML**. **PSWriteHTML** will need **PSSharedGoods**, and **PSSharedGoods** will need **Connectimo** and **PSWriteColor**. You can get all that from sources but if you **just want** to use my modules you should use `Install-Module` command. It's available in PowerShell 5.1. As an added bonus when I publish modules to **PowerShellGallery** I remove any junk, minimize modules to a single file which makes them faster to load and use. I really encourage you to use module from PowerShellGallery and treat **GitHub** as highely development version.
@@ -43,6 +54,9 @@ That's it. Whenever there's new version you simply run the command and you can e
 **The important thing** is if something works for you on production, keep using it till you test the new version on a test computer. I do changes that may not be big, but big enough that auto-update will break your code. For example, small rename to a parameter and your code stops working! Be responsible!
 
 ### Changelog
+
+- 0.0.22
+  - [x] This is last release of DASHIMO. It basically points to PSWRITEHTML. There is no need to download Dashimo. You can use Dashimo syntax straight from PSWriteHTML.
 
 - 0.0.20
   - [X] TableConditionalFormatting
