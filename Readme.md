@@ -24,7 +24,7 @@ Dashimo is very simple, intuitive PowerShell generated HTML file. That's right. 
 
 ## IMPORTANT
 
-**Dashimo** project has been integrated back to [PSWriteHTML](https://github.com/EvotecIT/PSWriteHTML). This project is now **ARCHIVED**. Dashimo syntax will live as part of PSWriteHTML aliases.
+**Dashimo** project has been integrated back to [PSWriteHTML](https://github.com/EvotecIT/PSWriteHTML). This project is now **ARCHIVED**. Dashimo syntax will live as part of [PSWriteHTML](https://github.com/EvotecIT/PSWriteHTML) aliases.
 
 ```PowerShell
 Uninstall-Module Dashimo -AllVersions
