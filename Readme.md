@@ -31,7 +31,9 @@ Uninstall-Module Dashimo -AllVersions
 Install-Module PSWriteHTML -Force
 ```
 
-Everything below is now a bit irrelevant. Leaving this for historical reasons.
+Everything below is now a bit irrelevant. Leaving this for historical reasons. The reason for moving Dashimo syntax to PSWriteHTML was that it was getting hard to keep both modules in sync, especially that 90% of features was identical. I still like Dashimo syntax therefore it will be fully supported as part of PSWriteHTML. Hope to see you in that project.
+
+## ARCHIVE
 
 ### How to Install
 
