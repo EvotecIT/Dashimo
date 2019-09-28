@@ -58,7 +58,7 @@ That's it. Whenever there's new version you simply run the command and you can e
 ### Changelog
 
 - 0.0.22
-  - [x] This is last release of DASHIMO. It basically points to PSWRITEHTML. There is no need to download Dashimo. You can use Dashimo syntax straight from PSWriteHTML.
+  - [x] This is last release of DASHIMO. It basically points to PSWRITEHTML making Dashimo, an empty module that just downloads PSWriteHTML. There is no need to download/install Dashimo. You can use Dashimo syntax straight from PSWriteHTML, just like you did before. Just make sure to update PSWriteHTML to newest version.
 
 - 0.0.20
   - [X] TableConditionalFormatting
